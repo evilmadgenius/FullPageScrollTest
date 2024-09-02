@@ -9,9 +9,9 @@ import { FileService } from './services/file.service';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { HttpService } from './services/HttpService.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
+import {MatLegacyCardModule as MatCardModule} from '@angular/material/legacy-card';
 import {ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
 
 @NgModule({ declarations: [
         AppComponent,
