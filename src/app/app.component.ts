@@ -2,7 +2,7 @@ import { Component,OnInit, ViewChild } from '@angular/core';
 import { FileService } from './services/file.service';
 import * as fileSaver from 'file-saver';
 import { HttpResponse } from '@angular/common/http';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 import { HttpService } from './services/HttpService.service';
 import { ElementRef } from '@angular/core';
 
@@ -80,17 +80,17 @@ export class AppComponent {
   loading = false;
   buttionText = "Submit";
 
-emailFormControl = new FormControl("", [
+emailFormControl = new UntypedFormControl("", [
   Validators.required,
   Validators.email
 ]);
 
-nameFormControl = new FormControl("", [
+nameFormControl = new UntypedFormControl("", [
   Validators.required,
   Validators.minLength(4)
 ]);
 
-enquiryFormControl = new FormControl("", [
+enquiryFormControl = new UntypedFormControl("", [
   Validators.required,
   Validators.maxLength(100)
 ]);
