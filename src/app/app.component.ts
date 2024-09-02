@@ -112,7 +112,7 @@ register() {
 
   //http://localhost:8000/sendmail
   //https://edraj.biz/mailServer/sendmail
-  this.http.sendEmail("https://edraj.biz/mailServer/sendmail", user).subscribe(
+  this.http.sendEmail("http://localhost:8000/sendmail", user).subscribe(
     (    data: any) => {
       let res:any = data; 
       console.log(data);
