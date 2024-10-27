@@ -9,12 +9,15 @@ import { FileService } from './services/file.service';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { HttpService } from './services/HttpService.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatLegacyCardModule as MatCardModule} from '@angular/material/legacy-card';
+import {MatCardModule} from '@angular/material/card';
+import { MatFormFieldModule, MatError } from '@angular/material/form-field';
 import {ReactiveFormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
 
+
 @NgModule({ declarations: [
-        AppComponent,
+        
         AboutmeComponent
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
@@ -22,5 +25,7 @@ import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-i
             { path: '', component: AppComponent },
             { path: 'aboutme', component: AboutmeComponent },
         ]),
-        BrowserAnimationsModule, MatCardModule, ReactiveFormsModule, MatInputModule], providers: [FileService, HttpService, provideHttpClient(withInterceptorsFromDi())] })
+        BrowserAnimationsModule, MatCardModule, ReactiveFormsModule, MatInputModule,MatFormFieldModule], 
+        providers: [FileService, HttpService, provideHttpClient(withInterceptorsFromDi())],
+        schemas: [CUSTOM_ELEMENTS_SCHEMA] })
 export class AppModule { }
