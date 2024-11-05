@@ -13,7 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule, MatError } from '@angular/material/form-field';
 import {ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({ declarations: [
